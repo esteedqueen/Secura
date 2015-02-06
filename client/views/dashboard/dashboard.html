@@ -17,8 +17,9 @@
 
 <template name="add">
 	<div class="panel panel-default">
+			<h1>Setup Emergency Contacts</h1>
 			<div class="panel-heading">
-				<h3 class="panel-title">Add a Post</h3>
+				<h3 class="panel-title">Add a Contact</h3>
 			</div>
 			<div class="panel-body">
 				{{#autoForm id="add" collection="Posts" type="insert"}}
@@ -27,7 +28,7 @@
 				<!-- {{> afQuickField name="picture"}} -->
 				{{> afQuickField name="picture"}}
 				<!-- {{> afFileUpload name="picture" collection="Attachments"}} -->
-				<button type="submit" class="btn btn-primary">Add Post</button>
+				<button type="submit" class="btn btn-primary">Add Contact</button>
 				{{/autoForm}}
 			</div>
 	</div>

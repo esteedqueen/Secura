@@ -1,29 +1,29 @@
 @Config =
-	name: 'My App'
-	title: 'Make Meteor Apps. Fast.'
-	subtitle: 'A boilerplate from MeteorFactory.io'
+	name: 'Secura'
+	title: 'Feel safe always with the click of a button!'
+	
 	logo: ->
 		'<b>' + @name + '</b>'
 	footer: ->
 		@name + ' - Copyright ' + new Date().getFullYear()
 	emails:
 		from: 'noreply@' + Meteor.absoluteUrl()
-	blog: 'http://meteorfactory.io'
-	about: 'http://meteorfactory.io'
+	blog: '#'
+	about: '#'
 	username: false
 	homeRoute: '/'
 	dashboardRoute: '/dashboard'
 	socialMedia:
 		facebook:
-			url: 'http://facebook.com/benjaminpeterjones'
+			url: '#'
 			icon: 'facebook'
 		twitter:
-			url: 'http://twitter.com/BenPeterJones'
+			url: '#'
 			icon: 'twitter'
 		github:
-			url: 'http://github.com/yogiben'
+			url: '#'
 			icon: 'github'
 		info:
-			url: 'http://meteorfactory.io'
+			url: '#'
 			icon: 'link'
 	publicRoutes: ['home']
