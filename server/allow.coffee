@@ -6,6 +6,14 @@ ProfilePictures.allow
 	download: (userId)->
 		true
 
+Contacts.allow
+	insert: (userId, doc) ->
+		userId == doc.owner
+	update: (userId, doc, fields, modifier) ->
+		userId == doc.owner
+	remove: (userId, doc) ->
+		userId == doc.owner
+
 Posts.allow
 	insert: (userId, doc) ->
 		userId == doc.owner

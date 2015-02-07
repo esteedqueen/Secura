@@ -1,12 +1,11 @@
 AdminConfig =
 	name: Config.name
 	collections : 
-		Posts: {
+		Contacts: {
 			color: 'red'
 			icon: 'pencil'
-			auxCollections: ['Attachments']
 			tableColumns: [
-              {label: 'Title',name:'title'}
+              {label: 'Name',name:'name'}
               {label:'User',name:'owner',collection:'Users'}
             ]
 		}
@@ -26,7 +25,7 @@ AdminConfig =
 		# 	{
 		# 		template: 'adminCollectionWidget'
 		# 		data:
-		# 			collection: 'Posts'
+		# 			collection: 'Contacts'
 		# 			class: 'col-lg-3 col-xs-6'
 		# 	}
 		# 	{

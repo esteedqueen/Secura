@@ -17,6 +17,7 @@ Router.map ->
     waitOn: ->
       [
         Meteor.subscribe 'posts'
+        Meteor.subscribe 'contacts'
         Meteor.subscribe 'favorites'
         Meteor.subscribe 'comments'
         Meteor.subscribe 'attachments'
@@ -28,7 +29,7 @@ Router.map ->
         Router.go url
       @next()
     data: ->
-      Posts: Posts.find({},{sort: {createdAt: -1}}).fetch()
+      Contacts: Contacts.find({},{sort: {createdAt: -1}}).fetch()
   @route "profile",
     path: "/profile"
     waitOn: ->
