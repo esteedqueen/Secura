@@ -27,6 +27,9 @@
 				{{> afQuickField name="email"}}
 				{{> afQuickField name="phone"}}
 
+				<!-- {{> afQuickField name="picture"}} -->
+				<!-- {{> afQuickField name="picture"}} -->
+				<!-- {{> afFileUpload name="picture" collection="Attachments"}} -->
 				<button type="submit" class="btn btn-primary">Add Contact</button>
 				{{/autoForm}}
 			</div>
@@ -51,14 +54,21 @@
 					<h3 class="panel-title">
 						{{name}}
 						<span class="pull-right">
-							<i class="fa fa-check-circle-o"></i> 
+							<i class="fa fa-check-circle-o"></i> <!-- {{contactCount _id}} -->
+							<!-- <i class="fa fa-comments"></i> {{commentCount _id}} -->
 						</span>
 					</h3>
 				</div>
 				<div class="panel-body">
-					
+					<!-- <p class="text-center">
+						{{#with getDoc picture 'Attachments'}}
+							<img src="{{url}}" class="img-thumbnail img-rounded">
+						{{/with}}
+					</p> -->
 					<div class="media">
-						
+						<!-- <a class="pull-left" href="#">
+							{{> profileThumb _id=owner}}
+						</a> -->
 						<div class="media-body">
 							<p>{{name}}</p>
 							<p>{{email}}</p>
@@ -66,13 +76,13 @@
 							{{#if $eq owner User._id}}
 							<small>
 								{{#afModal title="Update contact" omitFields="createdAt,updatedAt,owner" class="text-primary" collection="Contacts" operation="update" doc=_id}}
-									<i class="fa fa-pencil" buttonContent="Edit Contact"></i> Edit contact
+									<i class="fa fa-pencil" buttonContent="Edit post"></i> Edit contact
 								{{/afModal}}
 								{{#afModal title="Set Custom Message" omitFields="createdAt,updatedAt,owner,name,email,phone" class="text-primary" collection="Contacts" operation="update" doc=_id}}
-									<i class="fa fa-alert" buttonContent="Edit Contact"></i> Set Custom Message
+									<i class="fa fa-alert" buttonContent="Edit post"></i> Set Custom Message
 								{{/afModal}}
-								{{#afModal title="Delete Contact" class="text-danger" collection="Contacts" operation="remove" doc=_id}}
-									<i class="fa fa-times" buttonContent="Edit Contact"></i> Delete
+								{{#afModal title="Delete post" class="text-danger" collection="Contacts" operation="remove" doc=_id}}
+									<i class="fa fa-times" buttonContent="Edit post"></i> Delete
 								{{/afModal}}
 							</small>
 							{{/if}}
@@ -80,7 +90,9 @@
 					</div>
 				</div>
 				<div class="panel-footer">
-					
+					<!-- {{> favoriteButton _id=_id}} -->
+					<!-- {{> commentFormToggle }}
+					{{> comments}} -->
 				</div>
 		</div>
 	{{/each}}

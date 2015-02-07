@@ -13,7 +13,6 @@
 	username: false
 	homeRoute: '/'
 	dashboardRoute: '/dashboard'
-	panicRoute: '/panic'
 	socialMedia:
 		facebook:
 			url: '#'
