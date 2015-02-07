@@ -4,7 +4,7 @@
 			<div class="col-md-3">
 				{{> add}}
 				<!-- {{> addWithModal}} -->
-				{{> favorites}}
+				<!-- {{> favorites}} -->
 			</div>
 			<div class="col-md-9">
 				{{> alert}}
@@ -53,10 +53,10 @@
 				<div class="panel-heading">
 					<h3 class="panel-title">
 						{{name}}
-						<!-- <span class="pull-right">
-							<i class="fa fa-thumbs-up"></i> {{favoriteCount _id}}
-							<i class="fa fa-comments"></i> {{commentCount _id}}
-						</span> -->
+						<span class="pull-right">
+							<i class="fa fa-check-circle-o"></i> <!-- {{contactCount _id}} -->
+							<!-- <i class="fa fa-comments"></i> {{commentCount _id}} -->
+						</span>
 					</h3>
 				</div>
 				<div class="panel-body">
@@ -66,16 +66,20 @@
 						{{/with}}
 					</p> -->
 					<div class="media">
-						<a class="pull-left" href="#">
+						<!-- <a class="pull-left" href="#">
 							{{> profileThumb _id=owner}}
-						</a>
+						</a> -->
 						<div class="media-body">
 							<p>{{name}}</p>
+							<p>{{email}}</p>
 							<p>{{phone}}</p>
 							{{#if $eq owner User._id}}
 							<small>
 								{{#afModal title="Update contact" omitFields="createdAt,updatedAt,owner" class="text-primary" collection="Contacts" operation="update" doc=_id}}
 									<i class="fa fa-pencil" buttonContent="Edit post"></i> Edit contact
+								{{/afModal}}
+								{{#afModal title="Set Custom Message" omitFields="createdAt,updatedAt,owner,name,email,phone" class="text-primary" collection="Contacts" operation="update" doc=_id}}
+									<i class="fa fa-alert" buttonContent="Edit post"></i> Set Custom Message
 								{{/afModal}}
 								{{#afModal title="Delete post" class="text-danger" collection="Contacts" operation="remove" doc=_id}}
 									<i class="fa fa-times" buttonContent="Edit post"></i> Delete
@@ -86,15 +90,15 @@
 					</div>
 				</div>
 				<div class="panel-footer">
-					{{> favoriteButton _id=_id}}
-					{{> commentFormToggle }}
-					{{> comments}}
+					<!-- {{> favoriteButton _id=_id}} -->
+					<!-- {{> commentFormToggle }}
+					{{> comments}} -->
 				</div>
 		</div>
 	{{/each}}
 </template>
 
-<template name="favorites">
+<!-- <template name="favorites">
 	{{#if Favorites 'Posts'}}
 	<div class="panel panel-default">
 		<div class="panel-heading">
@@ -111,4 +115,4 @@
 		</div>
 	</div>
 	{{/if}}
-</template>
+</template> -->

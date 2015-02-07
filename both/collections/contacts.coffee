@@ -11,6 +11,11 @@ Schemas.Contacts = new SimpleSchema
 	phone:
 		type:String
 
+	custommessage:
+		type:String
+		autoform:
+			rows: 5
+
 	createdAt: 
 		type: Date
 		autoValue: ->
