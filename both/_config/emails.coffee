@@ -7,4 +7,4 @@ if Meteor.isServer
 		siteName: 'Secura'
 		companyAddress: 'MEST'
 		companyName: 'Secura'
-		companyUrl: '#'
+		companyUrl: 'secura.meteor.com'

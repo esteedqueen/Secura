@@ -1,0 +1,33 @@
+<template name="panic">
+	<div class="container">
+		<div class="row" id="champion-messages">
+			<!-- <div class="col-md-3">
+				{{> add}}
+				
+			</div> -->
+			<div class="col-md-9">
+				{{> sendAlert}}
+				<!-- {{> contacts}} -->
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="sendAlert">
+	<div class="panel panel-default">
+			<!-- <h1>Setup Emergency Contacts</h1>
+			<div class="panel-heading">
+				<h3 class="panel-title">Add a Contact</h3>
+			</div> -->
+			<div class="panel-body">
+				<!-- {{#autoForm collection="Contacts" id="sendAlert" type="insert"}} -->
+				<!-- {{> afQuickField name="name"}}
+				{{> afQuickField name="email"}}
+				{{> afQuickField name="phone"}} -->
+
+				<button type="submit">Panic button</button>
+				<!-- {{/autoForm}} -->
+			</div>
+	</div>
+</template>
+

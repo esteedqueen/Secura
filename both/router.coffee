@@ -34,6 +34,10 @@ Router.map ->
     path: "/profile"
     waitOn: ->
       Meteor.subscribe 'profilePictures'
+  @route "panic",
+    path: "/panic"
+    onStop: ->
+      Alert.clear()
   @route "account",
     path: "/account"
     onStop: ->
